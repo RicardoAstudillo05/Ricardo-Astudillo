@@ -2,22 +2,22 @@ version: "3.8"
 
 services:
   pgmoreno:
-    image: pgmoreno:latest
+    image: astudillo:latest
     build: .
     deploy:
       replicas: 1
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.pgmoreno.entrypoints=http"
-        - "traefik.http.routers.pgmoreno.rule=Host(`pgmoreno.byronrm.com`)"
-        - "traefik.http.middlewares.pgmoreno-https-redirect.redirectscheme.scheme=https"
-        - "traefik.http.routers.pgmoreno.middlewares=pgmoreno-https-redirect"
-        - "traefik.http.routers.pgmoreno-secure.entrypoints=https"
-        - "traefik.http.routers.pgmoreno-secure.rule=Host(`pgmoreno.byronrm.com`)"
-        - "traefik.http.routers.pgmoreno-secure.tls=true"
-        - "traefik.http.routers.pgmoreno-secure.tls.certresolver=http"
-        - "traefik.http.routers.pgmoreno-secure.service=pgmoreno"
-        - "traefik.http.services.pgmoreno.loadbalancer.server.port=80"
+        - "traefik.http.routers.astudillo.entrypoints=http"
+        - "traefik.http.routers.astudillo.rule=Host(`astudillo.byronrm.com`)"
+        - "traefik.http.middlewares.astudillo-https-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.astudillo.middlewares=pgmoreno-https-redirect"
+        - "traefik.http.routers.astudillo-secure.entrypoints=https"
+        - "traefik.http.routers.astudillo-secure.rule=Host(`astudillo.byronrm.com`)"
+        - "traefik.http.routers.astudillo-secure.tls=true"
+        - "traefik.http.routers.astudillo-secure.tls.certresolver=http"
+        - "traefik.http.routers.astudillo-secure.service=astudillo"
+        - "traefik.http.services.astudillo.loadbalancer.server.port=5000"
         - "traefik.docker.network=traefik-public"
     networks:
       - traefik-public

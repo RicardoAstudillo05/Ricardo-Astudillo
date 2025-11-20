@@ -82,5 +82,16 @@ jobs:
           echo "Descargando la imagen desde GIT"
           echo "${{ secrets.VPS_GHCR_PATH }}" | docker login ghcr.io -u ricardoastudillo05 --password-stdin
           docker pull ghcr.io/ricardoastudillo05/ricardo:latest
+
+          echo "Deteniendo los servicios (stack)"
+          docker satck rm ricardo || true 
+
+          echo "Esperar 20 segundos..."
+          sleep 20 
+
+          echo "Desplegando el stack o los servicios"
+          docker stack deploy --with-registry-auth -c stack.yml ricardo
+
+          docker ps 
   
 

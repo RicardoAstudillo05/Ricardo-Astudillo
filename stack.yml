@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   pgmoreno:
-    image: astudillo:latest
+    image: ghcr.io/ricardoastudillo05/ricardo:latest
     build: .
     deploy:
       replicas: 1

@@ -21,3 +21,4 @@ restart:
 	sleep 5
 	make build
 	make deploy
+

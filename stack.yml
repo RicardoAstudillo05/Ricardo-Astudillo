@@ -17,7 +17,7 @@ services:
         - "traefik.http.routers.astudillo-secure.tls=true"
         - "traefik.http.routers.astudillo-secure.tls.certresolver=http"
         - "traefik.http.routers.astudillo-secure.service=astudillo"
-        - "traefik.http.services.astudillo.loadbalancer.server.port=5000"
+        - "traefik.http.services.astudillo.loadbalancer.server.port=1001"
         - "traefik.docker.network=traefik-public"
     networks:
       - traefik-public

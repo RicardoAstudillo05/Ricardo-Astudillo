@@ -74,7 +74,7 @@ def home():
         </div>
 
         <div class="content">
-            <h1>🚀 ¡Hola Mundo con Flask y Traefik!</h1>
+            <h1>🚀 ¡PEPITO</h1>
             <p>Esta es una versión un poco más colorida, brillante y no tan seria 😅.</p>
 
             <div class="card">

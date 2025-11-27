@@ -93,5 +93,4 @@ jobs:
           docker stack deploy --with-registry-auth -c stack.yml ricardo
 
           docker ps 
-  
-.
+

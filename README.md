@@ -1,3 +1,2 @@
 # Ricardo
 >>>>>>> Ricardo
-.

@@ -22,4 +22,3 @@ restart:
 	make build
 	make deploy
 
-.
